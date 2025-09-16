@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gossip Platform</title>
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body class="bg-gray-950 text-slate-200 font-sans">
+    <div class="flex justify-center h-[100vh] overflow-hidden">
+      <nav
+        id="navBar"
+        class="w-[18vw] flex flex-col fixed left-32 top-0 max-2xl:left-24 max-xl:left-0 max-xl:w-[12vw] justify-center items-center max-lg:w-[15vw] max-max-500:bg-gray-950 max-max-500:w-[65vw] max-max-400:w-[75vw] max-max-300:w-[85vw] max-max-500:z-10 max-max-500:h-full max-max-500:items-baseline max-max-500:transition-all max-max-500:duration-300 max-max-500:ease-in-out max-max-500:opacity-0 max-max-500:-translate-x-full"
+      >
+        <div class="pr-4 max-xl:pr-0 max-max-500:ml-2">
+          <div
+            class="mt-3 ml-3 mb-3 max-max-500:mt-4 max-max-500:flex max-max-500:justify-between max-max-500:items-center"
+          >
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 128 128"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Gossip logo - G with waves"
+              class="cursor-pointer drop-shadow-[0_0_3px_rgba(59,130,246,0.9)] transition-transform duration-300 hover:scale-110 rounded-xl"
+            >
+              <rect width="128" height="128" rx="28" fill="#1f2937" />
+              <path
+                d="M64 34c-16.57 0-30 13.43-30 30s13.43 30 30 30c12.4 0 23.07-7.56 27.5-18.3H66a8 8 0 1 1 0-16h38c.43 2.09.65 4.25.65 6.5 0 23.47-17.68 41.8-40.65 41.8S23.35 89.47 23.35 64 40.2 22.2 64 22.2c10.9 0 20.8 4.03 28.4 10.67l-7.9 6.92C79.3 36.9 71.9 34 64 34Z"
+                fill="#93c5fd"
+              />
+              <path
+                d="M90 52a2 2 0 0 1 2-2c10.5 0 19 8.5 19 19s-8.5 19-19 19a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2c6.6 0 12-5.4 12-12s-5.4-12-12-12a2 2 0 0 1-2-2v-6Z"
+                fill="#22d3ee"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#e3e3e3"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="hidden max-max-500:flex"
+              id="closeBtn"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </div>
+          <div class="space-y-1">
+            <div
+              class="flex items-center space-x-4 hover:cursor-pointer transition-colors duration-300 ease-in-out hover:bg-gray-800 px-4 py-2 rounded-full"
+            >
+              <span>
+                <img
+                  src="Assets/img/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="Home"
+                />
+              </span>
+              <span class="text-xl font-bold max-xl:hidden max-max-500:flex"
+                >Home</span
+              >
+            </div>
+            <div
+              class="flex items-center space-x-4 hover:cursor-pointer transition-colors duration-300 ease-in-out hover:bg-gray-800 px-4 py-2 rounded-full"
+            >
+              <span>
+                <img
+                  src="Assets/img/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="Explore"
+                />
+              </span>
+              <span class="text-xl max-xl:hidden max-max-500:flex"
+                >Explore</span
+              >
+            </div>
+            <div
+              class="flex items-center space-x-4 hover:cursor-pointer transition-colors duration-300 ease-in-out hover:bg-gray-800 px-4 py-2 rounded-full"
+            >
+              <span>
+                <img
+                  src="Assets/img/notifications_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="Notification"
+                />
+              </span>
+              <span class="text-xl max-xl:hidden max-max-500:flex"
+                >Notification</span
+              >
+            </div>
+            <div
+              class="flex items-center space-x-4 hover:cursor-pointer transition-colors duration-300 ease-in-out hover:bg-gray-800 px-4 py-2 rounded-full"
+            >
+              <span>
+                <img
+                  src="Assets/img/inbox_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="Message"
+                />
+              </span>
+              <span class="text-xl max-xl:hidden max-max-500:flex"
+                >Message</span
+              >
+            </div>
+            <div
+              class="flex items-center space-x-4 hover:cursor-pointer transition-colors duration-300 ease-in-out hover:bg-gray-800 px-4 py-2 rounded-full"
+            >
+              <span>
+                <img
+                  src="Assets/img/bolt_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="Bolt"
+                />
+              </span>
+              <span class="text-xl max-xl:hidden max-max-500:flex">Bolt</span>
+            </div>
+            <div
+              class="flex items-center space-x-4 hover:cursor-pointer transition-colors duration-300 ease-in-out hover:bg-gray-800 px-4 py-2 rounded-full max-2xl:hidden"
+            >
+              <span>
+                <img
+                  src="Assets/img/communication_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="Communities"
+                />
+              </span>
+              <span class="text-xl">Communities</span>
+            </div>
+            <div
+              class="flex items-center space-x-4 hover:cursor-pointer transition-colors duration-300 ease-in-out hover:bg-gray-800 px-4 py-2 rounded-full max-2xl:hidden"
+            >
+              <span>
+                <img
+                  src="Assets/img/crown_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="Premium"
+                />
+              </span>
+              <span class="text-xl">Premium</span>
+            </div>
+            <div
+              class="flex items-center space-x-4 hover:cursor-pointer transition-colors duration-300 ease-in-out hover:bg-gray-800 px-4 py-2 rounded-full"
+            >
+              <span>
+                <img
+                  src="Assets/img/account_box_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="Profile"
+                />
+              </span>
+              <span class="text-xl max-xl:hidden max-max-500:flex"
+                >Profile</span
+              >
+            </div>
+            <div
+              class="flex items-center space-x-4 hover:cursor-pointer transition-colors duration-300 ease-in-out hover:bg-gray-800 px-4 py-2 rounded-full"
+            >
+              <span>
+                <img
+                  src="Assets/img/more_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="More"
+                />
+              </span>
+              <span class="text-xl max-xl:hidden max-max-500:flex">More</span>
+            </div>
+          </div>
+          <button
+            class="border-2 border-black bg-slate-200 text-black mt-2 px-24 py-3 rounded-full font-bold text-lg hover:bg-slate-300 transition-all duration-300 max-xl:px-4 max-max-500:px-24 max-max-500:py-4"
+          >
+            Post
+          </button>
+        </div>
+        <div
+          class="flex justify-center items-center space-x-3 cursor-pointer mt-12 pr-2 transition-all duration-300 hover:bg-gray-800 px-4 py-2 rounded-full max-xl:px-0"
+        >
+          <img
+            class="w-10 h-10 rounded-full"
+            src="Assets/img/Profile picture-Picsart-AiImageEnhancer.jpg"
+            alt="Profile Picture"
+          />
+          <span
+            class="flex flex-col justify-center items-start max-xl:hidden max-max-500:flex"
+          >
+            <h4 class="font-bold">Sarwesh Sain</h4>
+            <p class="text-gray-500">@sarwesh_so48660</p>
+          </span>
+          <img
+            class="max-xl:hidden max-max-500:flex"
+            src="Assets/img/more_horiz_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="More"
+          />
+        </div>
+      </nav>
+
+      <main
+        id="main"
+        class="border-r border-l border-gray-700 max-h-fit overflow-y-auto scrollbar-hide w-[40vw] ml-[18rem] max-2xl:w-[42vw] max-2xl:ml-[16rem] max-xl:w-[52vw] max-xl:ml-[7rem] max-lg:w-[80vw] max-lg:ml-[5rem] max-max-500:ml-0 max-max-500:w-[95vw]"
+      >
+        <div class="forimgandlogoforboth max-max-500:flex max-max-500:m-2">
+          <div class="myimg hidden max-max-500:flex">
+            <img
+              id="toogleBtn"
+              class="w-8 h-8 rounded-full"
+              src="Assets/img/Profile picture-Picsart-AiImageEnhancer.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="forphoneuse hidden max-max-500:flex max-max-500:w-[20vw] max-max-500:m-auto"
+          >
+            <svg
+              width="35"
+              height="35"
+              viewBox="0 0 128 128"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Gossip logo - G with waves"
+              class="cursor-pointer drop-shadow-[0_0_3px_rgba(59,130,246,0.9)] transition-transform duration-300 hover:scale-110 rounded-xl"
+            >
+              <rect width="128" height="128" rx="28" fill="#1f2937" />
+              <path
+                d="M64 34c-16.57 0-30 13.43-30 30s13.43 30 30 30c12.4 0 23.07-7.56 27.5-18.3H66a8 8 0 1 1 0-16h38c.43 2.09.65 4.25.65 6.5 0 23.47-17.68 41.8-40.65 41.8S23.35 89.47 23.35 64 40.2 22.2 64 22.2c10.9 0 20.8 4.03 28.4 10.67l-7.9 6.92C79.3 36.9 71.9 34 64 34Z"
+                fill="#93c5fd"
+              />
+              <path
+                d="M90 52a2 2 0 0 1 2-2c10.5 0 19 8.5 19 19s-8.5 19-19 19a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2c6.6 0 12-5.4 12-12s-5.4-12-12-12a2 2 0 0 1-2-2v-6Z"
+                fill="#22d3ee"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div class="border-b border-gray-700 flex h-14 items-center">
+          <div
+            class="relative flex-1 h-full flex items-center justify-center font-bold hover:cursor-pointer transition-colors duration-300 ease-in-out hover:bg-gray-800 max-max-500:text-sm"
+          >
+            For You
+            <span
+              class="absolute bottom-0 w-[20%] h-1 bg-blue-500 rounded-full"
+            ></span>
+          </div>
+          <div
+            class="flex-1 h-full flex items-center justify-center font-bold text-gray-500 hover:cursor-pointer transition-colors duration-300 ease-in-out hover:bg-gray-800 max-max-500:text-sm"
+          >
+            Following
+          </div>
+        </div>
+        <div class="flex m-4 max-max-500:m-2 max-max-500:gap-2">
+          <div
+            class="w-[3.5vw] max-xl:w-[5.5vw] max-lg:w-[7vw] max-max-500:w-[10vw]"
+          >
+            <img
+              class="w-10 h-10 rounded-full hover:cursor-pointer max-max-500:w-8 max-max-500:h-8"
+              src="Assets/img/Profile picture-Picsart-AiImageEnhancer.jpg"
+              alt="My picture"
+            />
+          </div>
+          <div class="w-full flex flex-col gap-4 mt-1 max-max-500:gap-2">
+            <div>
+              <input
+                class="w-full outline-none text-xl bg-gray-950 text-slate-200 placeholder:text-gray-500 max-max-500:text-base"
+                type="text"
+                placeholder="What's on your mind?"
+              />
+            </div>
+            <div class="flex gap-1 items-center hover:cursor-pointer">
+              <span class=""
+                ><img
+                  src="Assets/img/globe_uk_16dp_E3E3E3_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="globe"
+              /></span>
+              <span class="text-sm font-bold text-blue-400 max-max-500:text-xs"
+                >Everyone can reply</span
+              >
+            </div>
+            <div class="border-t border-gray-700 w-full"></div>
+            <div class="flex justify-between items-center">
+              <div class="flex gap-4 hover:cursor-pointer max-max-500:gap-2">
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/img/image_18dp_60A5FA_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="image"
+                />
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/img/gif_box_18dp_60A5FA_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="gif"
+                />
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/img/bolt_18dp_60A5FA_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="bolt"
+                />
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/img/checklist_18dp_60A5FA_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="checklist"
+                />
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/img/mood_18dp_60A5FA_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="smiling face"
+                />
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/img/schedule_18dp_60A5FA_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="schedule"
+                />
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/img/location_on_18dp_60A5FA_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="location"
+                />
+              </div>
+              <button
+                class="border-2 border-gray-500 bg-gray-500 text-black px-4 py-1 rounded-full font-bold max-max-500:px-2 max-max-500:text-sm"
+              >
+                Post
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-700 w-full"></div>
+        <div class="m-3 flex justify-center items-center">
+          <button class="text-blue-400 max-max-500:text-xs">
+            Show 35 posts
+          </button>
+        </div>
+        <div class="border-t border-gray-700 w-full"></div>
+        <div class="flex m-4 gap-2 max-max-500:m-2">
+          <div
+            class="w-[3.5vw] max-xl:w-[5.5vw] max-lg:w-[7vw] max-max-500:w-[12vw] max-max-400:w-[16vw] max-max-300:w-[22vw]"
+          >
+            <img
+              class="w-12 h-12 rounded-full max-max-500:w-8 max-max-500:h-8"
+              src="Assets/main-section-img/for fiverr desktop-1753089372854.jpeg"
+              alt="Portfolio Website Screenshot"
+            />
+          </div>
+          <div class="flex flex-col flex-grow gap-1">
+            <div class="flex justify-between">
+              <div class="flex max-max-500:items-center">
+                <a
+                  class="font-bold hover:cursor-pointer hover:underline max-max-500:text-sm"
+                  href="https://portfolio-website-nine-rouge-64.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Portfolio Website
+                </a>
+                <img
+                  class="w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/main-section-img/checkmark_purple.png"
+                  alt="Checkmark"
+                />
+                <p
+                  class="text-gray-500 hover:cursor-pointer max-max-500:text-xs max-max-400:hidden"
+                >
+                  @personal-portfolio • 2h
+                </p>
+              </div>
+              <div class="flex">
+                <img
+                  class="cursor-pointer w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/main-section-img/bolt_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="bolt"
+                />
+                <img
+                  class="cursor-pointer w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/img/more_horiz_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="more"
+                />
+              </div>
+            </div>
+            <div>
+              <p class="hover:cursor-pointer max-max-500:text-sm">
+                Want a Personal Professional Portfolio that can impress anyone
+                ORDER NOW!
+              </p>
+            </div>
+            <div>
+              <video
+                class="w-full max-w-lg rounded-xl border-[1px] border-gray-500 mt-2 hover:cursor-pointer"
+                controls
+                autoplay
+                muted
+                loop
+                src="Assets/Videos/portfolio.mp4"
+              ></video>
+            </div>
+            <div class="logo flex justify-between mt-2">
+              <span class="flex hover:cursor-pointer max-max-500:items-center">
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/main-section-img/comment_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="comment"
+                />
+                <p class="text-gray-500 text-sm px-1 max-max-500:text-xs">
+                  986
+                </p>
+              </span>
+              <span class="flex hover:cursor-pointer max-max-500:items-center">
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/main-section-img/forward_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="forward"
+                />
+                <p class="text-gray-500 text-sm px-1 max-max-500:text-xs">
+                  2.6k
+                </p>
+              </span>
+              <span class="flex hover:cursor-pointer max-max-500:items-center">
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/main-section-img/favorite_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="favorite"
+                />
+                <p class="text-gray-500 text-sm px-1 max-max-500:text-xs">
+                  26k
+                </p>
+              </span>
+              <span class="flex hover:cursor-pointer max-max-500:items-center">
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/main-section-img/bar_chart_4_bars_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="view"
+                />
+                <p class="text-gray-500 text-sm px-1 max-max-500:text-xs">
+                  80M
+                </p>
+              </span>
+              <div
+                class="flex gap-2 hover:cursor-pointer max-max-500:items-center"
+              >
+                <img
+                  class="w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/main-section-img/bookmark_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="bookmark"
+                />
+                <img
+                  class="w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/main-section-img/share_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="share"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-700 w-full"></div>
+        <div class="flex m-4 gap-2 max-max-500:m-2">
+          <div
+            class="w-[3.5vw] max-xl:w-[5.5vw] max-lg:w-[7vw] max-max-500:w-[12vw] max-max-400:w-[16vw] max-max-300:w-[22vw]"
+          >
+            <img
+              class="w-12 h-12 rounded-full max-max-500:w-8 max-max-500:h-8"
+              src="Assets/main-section-img/fiverr-1024px-768px-spotify-desktop-screenshot.png"
+              alt="Music App Screenshot"
+            />
+          </div>
+          <div class="flex flex-col flex-grow gap-1">
+            <div class="flex justify-between">
+              <div class="flex max-max-500:items-center">
+                <a
+                  class="font-bold hover:cursor-pointer hover:underline max-max-500:text-sm"
+                  href="https://streamify-clone-black-eight.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Streamify Music App
+                </a>
+                <img
+                  class="w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/main-section-img/checkmark_purple.png"
+                  alt="Checkmark"
+                />
+                <p
+                  class="text-gray-500 hover:cursor-pointer max-max-500:text-xs max-max-400:hidden"
+                >
+                  @music-app • 6h
+                </p>
+              </div>
+              <div class="flex">
+                <img
+                  class="cursor-pointer w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/main-section-img/bolt_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="bolt"
+                />
+                <img
+                  class="cursor-pointer w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/img/more_horiz_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="more"
+                />
+              </div>
+            </div>
+            <div>
+              <p class="hover:cursor-pointer max-max-500:text-sm">
+                Want a personal Music App that can impress anyone ORDER NOW!
+              </p>
+            </div>
+            <div>
+              <video
+                class="w-full max-w-lg rounded-xl border-[1px] border-gray-500 mt-2 hover:cursor-pointer"
+                controls
+                autoplay
+                muted
+                loop
+                src="Assets/Videos/spotify.mp4"
+              ></video>
+            </div>
+            <div class="logo flex justify-between mt-2">
+              <span class="flex hover:cursor-pointer max-max-500:items-center">
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/main-section-img/comment_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="comment"
+                />
+                <p class="text-gray-500 text-sm px-1 max-max-500:text-xs">
+                  845
+                </p>
+              </span>
+              <span class="flex hover:cursor-pointer max-max-500:items-center">
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/main-section-img/forward_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="forward"
+                />
+                <p class="text-gray-500 text-sm px-1 max-max-500:text-xs">
+                  3.5k
+                </p>
+              </span>
+              <span class="flex hover:cursor-pointer max-max-500:items-center">
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/main-section-img/favorite_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="favorite"
+                />
+                <p class="text-gray-500 text-sm px-1 max-max-500:text-xs">
+                  86k
+                </p>
+              </span>
+              <span class="flex hover:cursor-pointer max-max-500:items-center">
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/main-section-img/bar_chart_4_bars_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="view"
+                />
+                <p class="text-gray-500 text-sm px-1 max-max-500:text-xs">
+                  200M
+                </p>
+              </span>
+              <div class="flex gap-2 hover:cursor-pointer">
+                <img
+                  class="w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/main-section-img/bookmark_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="bookmark"
+                />
+                <img
+                  class="w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/main-section-img/share_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="share"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-700 w-full"></div>
+        <div class="flex m-4 gap-2 max-max-500:m-2">
+          <div
+            class="w-[3.5vw] max-xl:w-[5.5vw] max-lg:w-[7vw] max-max-500:w-[12vw] max-max-400:w-[16vw] max-max-300:w-[22vw]"
+          >
+            <img
+              class="w-12 h-12 rounded-full max-max-500:w-8 max-max-500:h-8"
+              src="Assets/main-section-img/desktopFullScreenshotFIRST.png"
+              alt="Weather App Screenshot"
+            />
+          </div>
+          <div class="flex flex-col flex-grow gap-1">
+            <div class="flex justify-between">
+              <div class="flex max-max-500:items-center">
+                <a
+                  class="font-bold hover:cursor-pointer hover:underline max-max-500:text-sm"
+                  href="https://weather-app-one-tau-16.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Weather App
+                </a>
+                <img
+                  class="w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/main-section-img/checkmark_purple.png"
+                  alt="Checkmark"
+                />
+                <p
+                  class="text-gray-500 hover:cursor-pointer max-max-500:text-xs max-max-400:hidden"
+                >
+                  @weather-app • 10h
+                </p>
+              </div>
+              <div class="flex">
+                <img
+                  class="cursor-pointer w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/main-section-img/bolt_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="bolt"
+                />
+                <img
+                  class="cursor-pointer w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/img/more_horiz_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="more"
+                />
+              </div>
+            </div>
+            <div>
+              <p class="hover:cursor-pointer max-max-500:text-sm">
+                Want a App that can search any Cities Weather With the help of
+                API ORDER NOW!
+              </p>
+            </div>
+            <div>
+              <video
+                class="w-full max-w-lg rounded-xl border-[1px] border-gray-500 mt-2 hover:cursor-pointer"
+                controls
+                autoplay
+                muted
+                loop
+                src="Assets/Videos/weatherApp-demo.mp4"
+              ></video>
+            </div>
+            <div class="logo flex justify-between mt-2">
+              <span class="flex hover:cursor-pointer max-max-500:items-center">
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/main-section-img/comment_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="comment"
+                />
+                <p class="text-gray-500 text-sm px-1 max-max-500:text-xs">
+                  1500
+                </p>
+              </span>
+              <span class="flex hover:cursor-pointer max-max-500:items-center">
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/main-section-img/forward_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="forward"
+                />
+                <p class="text-gray-500 text-sm px-1 max-max-500:text-xs">
+                  45.5k
+                </p>
+              </span>
+              <span class="flex hover:cursor-pointer max-max-500:items-center">
+                <img
+                  class="w-5 h-5"
+                  src="Assets/main-section-img/favorite_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="favorite"
+                />
+                <p class="text-gray-500 text-sm px-1 max-max-500:text-xs">
+                  756k
+                </p>
+              </span>
+              <span class="flex hover:cursor-pointer max-max-500:items-center">
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/main-section-img/bar_chart_4_bars_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="view"
+                />
+                <p class="text-gray-500 text-sm px-1 max-max-500:text-xs">
+                  400M
+                </p>
+              </span>
+              <div class="flex gap-2 hover:cursor-pointer">
+                <img
+                  class="w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/main-section-img/bookmark_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="bookmark"
+                />
+                <img
+                  class="w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/main-section-img/share_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="share"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-700 w-full"></div>
+        <div class="flex m-4 gap-2 max-max-500:m-2">
+          <div
+            class="w-[3.5vw] max-xl:w-[5.5vw] max-lg:w-[7vw] max-max-500:w-[12vw] max-max-400:w-[16vw] max-max-300:w-[22vw]"
+          >
+            <img
+              class="w-12 h-12 rounded-full max-max-500:w-8 max-max-500:h-8"
+              src="Assets/main-section-img/1.png"
+              alt="Movies Search App Screenshot"
+            />
+          </div>
+          <div class="flex flex-col flex-grow gap-1">
+            <div class="flex justify-between">
+              <div class="flex max-max-500:items-center">
+                <a
+                  class="font-bold hover:cursor-pointer hover:underline max-max-500:text-sm"
+                  href="https://movie-search-app-rho-eight.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Movies Search App
+                </a>
+                <img
+                  class="w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/main-section-img/checkmark_purple.png"
+                  alt="Checkmark"
+                />
+                <p
+                  class="text-gray-500 hover:cursor-pointer max-max-500:text-xs max-max-400:hidden"
+                >
+                  @movie-search-app • 12h
+                </p>
+              </div>
+              <div class="flex">
+                <img
+                  class="cursor-pointer w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/main-section-img/bolt_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="bolt"
+                />
+                <img
+                  class="cursor-pointer w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/img/more_horiz_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="more"
+                />
+              </div>
+            </div>
+            <div>
+              <p class="hover:cursor-pointer max-max-500:text-sm">
+                Want a App that can search any Movies with the help of API ORDER
+                NOW!
+              </p>
+            </div>
+            <div>
+              <video
+                class="w-full max-w-lg rounded-xl border-[1px] border-gray-500 mt-2 hover:cursor-pointer"
+                controls
+                autoplay
+                muted
+                loop
+                src="Assets/Videos/movies.mp4"
+              ></video>
+            </div>
+            <div class="logo flex justify-between mt-2">
+              <span class="flex hover:cursor-pointer max-max-500:items-center">
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/main-section-img/comment_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="comment"
+                />
+                <p class="text-gray-500 text-sm px-1 max-max-500:text-xs">
+                  1200
+                </p>
+              </span>
+              <span class="flex hover:cursor-pointer max-max-500:items-center">
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/main-section-img/forward_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="forward"
+                />
+                <p class="text-gray-500 text-sm px-1 max-max-500:text-xs">
+                  44.5k
+                </p>
+              </span>
+              <span class="flex hover:cursor-pointer max-max-500:items-center">
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/main-section-img/favorite_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="favorite"
+                />
+                <p class="text-gray-500 text-sm px-1 max-max-500:text-xs">
+                  556k
+                </p>
+              </span>
+              <span class="flex hover:cursor-pointer max-max-500:items-center">
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/main-section-img/bar_chart_4_bars_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="view"
+                />
+                <p class="text-gray-500 text-sm px-1 max-max-500:text-xs">
+                  2400M
+                </p>
+              </span>
+              <div class="flex gap-2 hover:cursor-pointer">
+                <img
+                  class="w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/main-section-img/bookmark_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="bookmark"
+                />
+                <img
+                  class="w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/main-section-img/share_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="share"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-700 w-full"></div>
+        <div class="flex m-4 gap-2 max-max-500:m-2">
+          <div
+            class="w-[3.5vw] max-xl:w-[5.5vw] max-lg:w-[7vw] max-max-500:w-[12vw] max-max-400:w-[16vw] max-max-300:w-[22vw]"
+          >
+            <img
+              class="w-12 h-12 rounded-full max-max-500:w-8 max-max-500:h-8"
+              src="Assets/main-section-img/netlfix-png-file-1024-768px-fiverr-portfolio.png"
+              alt="netflix-clone Screenshot"
+            />
+          </div>
+          <div class="flex flex-col flex-grow gap-1">
+            <div class="flex justify-between">
+              <div class="flex max-max-500:items-center">
+                <a
+                  class="font-bold hover:cursor-pointer hover:underline max-max-500:text-sm"
+                  href="https://netflix-clone-five-plum.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Netflix Clone
+                </a>
+                <img
+                  class="w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/main-section-img/checkmark_purple.png"
+                  alt="Checkmark"
+                />
+                <p
+                  class="text-gray-500 hover:cursor-pointer max-max-500:text-xs max-max-400:hidden"
+                >
+                  @netflix-clone • 18h
+                </p>
+              </div>
+              <div class="flex">
+                <img
+                  class="cursor-pointer w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/main-section-img/bolt_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="bolt"
+                />
+                <img
+                  class="cursor-pointer w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/img/more_horiz_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="more"
+                />
+              </div>
+            </div>
+            <div>
+              <p class="hover:cursor-pointer max-max-500:text-sm">
+                Want a pixel perfect clone of any website ORDER NOW!
+              </p>
+            </div>
+            <div>
+              <video
+                class="w-full max-w-lg rounded-xl border-[1px] border-gray-500 mt-2 hover:cursor-pointer"
+                controls
+                autoplay
+                muted
+                loop
+                src="Assets/Videos/netlfix-mp4-480px-video-duration-under1min.mp4"
+              ></video>
+            </div>
+            <div class="logo flex justify-between mt-2">
+              <span class="flex hover:cursor-pointer max-max-500:items-center">
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/main-section-img/comment_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="comment"
+                />
+                <p class="text-gray-500 text-sm px-1 max-max-500:text-xs">
+                  150
+                </p>
+              </span>
+              <span class="flex hover:cursor-pointer max-max-500:items-center">
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/main-section-img/forward_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="forward"
+                />
+                <p class="text-gray-500 text-sm px-1 max-max-500:text-xs">
+                  77.5k
+                </p>
+              </span>
+              <span class="flex hover:cursor-pointer max-max-500:items-center">
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/main-section-img/favorite_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="favorite"
+                />
+                <p class="text-gray-500 text-sm px-1 max-max-500:text-xs">
+                  586k
+                </p>
+              </span>
+              <span class="flex hover:cursor-pointer max-max-500:items-center">
+                <img
+                  class="w-5 h-5 max-max-500:w-4 max-max-500:h-4"
+                  src="Assets/main-section-img/bar_chart_4_bars_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="view"
+                />
+                <p class="text-gray-500 text-sm px-1 max-max-500:text-xs">
+                  244M
+                </p>
+              </span>
+              <div class="flex gap-2 hover:cursor-pointer">
+                <img
+                  class="w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/main-section-img/bookmark_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="bookmark"
+                />
+                <img
+                  class="w-6 h-6 max-max-500:w-[1.2rem] max-max-500:h-[1.2rem]"
+                  src="Assets/main-section-img/share_16dp_6B7280_FILL0_wght400_GRAD0_opsz20.svg"
+                  alt="share"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-700 w-full"></div>
+      </main>
+      <aside
+        id="aside"
+        class="w-[25vw] max-h-fit overflow-y-auto scrollbar-hide max-2xl:w-[27vw] max-xl:w-[35vw] max-lg:hidden"
+      >
+        <div
+          class="fixed w-[25vw] top-0 h-16 bg-gray-950 max-2xl:w-[27vw] max-xl:w-[35vw]"
+        >
+          <div
+            class="flex justify-center fixed right-[8.9rem] max-2xl:right-[7.2rem] max-xl:right-[1.5rem]"
+          >
+            <img
+              class="absolute w-6 top-[18px] right-[19.75rem] cursor-pointer max-xl:right-[18.2rem]"
+              src="Assets/img/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+              alt="Search"
+            />
+            <input
+              class="bg-gray-900 text-slate-100 border border-gray-700 rounded-full placeholder:text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all py-2 pl-10 pr-12 w-[22rem] mt-2 max-xl:w-[32vw]"
+              type="text"
+              placeholder="Search"
+            />
+          </div>
+        </div>
+        <div class="content">
+          <div
+            class="border border-gray-700 p-4 m-4 rounded-xl space-y-3 mt-20"
+          >
+            <h3 class="text-xl font-bold">Subscribe to Premium</h3>
+            <p class="">
+              Subscribe to unlock new features and if eligible, receive a share
+              of revenue.
+            </p>
+            <button
+              class="bg-blue-600 text-white font-bold text-base py-1 px-3 rounded-full hover:bg-blue-700 transition-all duration-300"
+            >
+              Subscribe
+            </button>
+          </div>
+          <div class="border border-gray-700 p-4 m-4 rounded-xl space-y-4">
+            <h3 class="text-xl font-bold">What’s happening</h3>
+            <div class="flex justify-between">
+              <span>
+                <p class="text-sm text-gray-500 hover:cursor-pointer">
+                  Sports · Trending
+                </p>
+                <h4 class="text-base font-bold hover:cursor-pointer">
+                  Jay Shah
+                </h4>
+                <p class="text-sm text-gray-500 hover:cursor-pointer">
+                  1,483 posts
+                </p>
+              </span>
+              <span>
+                <img
+                  class="hover:cursor-pointer"
+                  src="Assets/img/more_horiz_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="more"
+                />
+              </span>
+            </div>
+            <div class="flex justify-between">
+              <span>
+                <p class="text-sm text-gray-500 hover:cursor-pointer">
+                  Entertainment · Trending
+                </p>
+                <h4 class="text-base font-bold hover:cursor-pointer">
+                  Sunita Ahuja
+                </h4>
+                <p class="text-sm text-gray-500 hover:cursor-pointer">
+                  1,922 posts
+                </p>
+              </span>
+              <span>
+                <img
+                  class="hover:cursor-pointer"
+                  src="Assets/img/more_horiz_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="more"
+                />
+              </span>
+            </div>
+            <div class="flex justify-between">
+              <span>
+                <p class="text-sm text-gray-500 hover:cursor-pointer">
+                  Sports · Trending
+                </p>
+                <h4 class="text-base font-bold hover:cursor-pointer">
+                  #BoycottAsiaCup
+                </h4>
+                <p class="text-sm text-gray-500 hover:cursor-pointer">
+                  5,066 posts
+                </p>
+              </span>
+              <span>
+                <img
+                  class="hover:cursor-pointer"
+                  src="Assets/img/more_horiz_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="more"
+                />
+              </span>
+            </div>
+            <div class="flex justify-between">
+              <span>
+                <p class="text-sm text-gray-500 hover:cursor-pointer">
+                  Politics · Trending
+                </p>
+                <h4 class="text-base font-bold hover:cursor-pointer">LGBTQ</h4>
+                <p class="text-sm text-gray-500 hover:cursor-pointer">
+                  54.4K posts
+                </p>
+              </span>
+              <span>
+                <img
+                  class="hover:cursor-pointer"
+                  src="Assets/img/more_horiz_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="more"
+                />
+              </span>
+            </div>
+            <button class="text-blue-500">Show more</button>
+          </div>
+          <div class="border border-gray-700 p-4 m-4 rounded-xl space-y-4">
+            <h3 class="text-xl font-bold">Who to follow</h3>
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex justify-center items-center gap-4">
+                <img
+                  class="w-10 h-10 rounded-full cursor-pointer"
+                  src="Assets/img/FU_1rYLv_400x400.jpg"
+                  alt="News Channel"
+                />
+                <span>
+                  <h4
+                    class="font-bold cursor-pointer hover:underline underline-offset-2"
+                  >
+                    News18 Assam NE
+                  </h4>
+                  <p class="text-gray-500 cursor-pointer">@News18Northeast</p>
+                </span>
+              </div>
+              <button
+                class="bg-white text-black px-3 py-1.5 rounded-full font-bold text-md hover:bg-slate-300 transition-all duration-300"
+              >
+                Follow
+              </button>
+            </div>
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex justify-center items-center gap-4">
+                <img
+                  class="w-10 h-10 rounded-full cursor-pointer"
+                  src="Assets/img/QvZsAkCm_400x400.jpg"
+                  alt="Goverment"
+                />
+                <span>
+                  <h4 class="font-bold hover:underline underline-offset-2">
+                    DIPR Assam
+                  </h4>
+                  <p class="text-gray-500 cursor-pointer">@diprassam</p>
+                </span>
+              </div>
+              <button
+                class="bg-white text-black px-3 py-1.5 rounded-full font-bold text-md hover:bg-slate-300 transition-all duration-300"
+              >
+                Follow
+              </button>
+            </div>
+            <div class="flex items-center justify-between gap-4">
+              <div
+                class="flex justify-center items-center gap-4 cursor-pointer"
+              >
+                <img
+                  class="w-10 h-10 rounded-full"
+                  src="Assets/img/3FiNdciH_400x400.jpg"
+                  alt="Indian Flag"
+                />
+                <span>
+                  <h4 class="font-bold hover:underline underline-offset-2">
+                    NHM_Assam
+                  </h4>
+                  <p class="text-gray-500 cursor-pointer">@nhm_assam</p>
+                </span>
+              </div>
+
+              <button
+                class="bg-white text-black px-3 py-1.5 rounded-full font-bold text-md hover:bg-slate-300 transition-all duration-300"
+              >
+                Follow
+              </button>
+            </div>
+            <button class="text-blue-500">Show more</button>
+          </div>
+        </div>
+        <footer class="my-4 mb-24 mx-8 space-x-2">
+          <span class="text-xs text-gray-500 hover:underline cursor-pointer"
+            >Terms of Service |</span
+          >
+          <span class="text-xs text-gray-500 hover:underline cursor-pointer"
+            >Privacy Policy |</span
+          >
+          <span class="text-xs text-gray-500 hover:underline cursor-pointer"
+            >Cookie Policy |</span
+          >
+          <span class="text-xs text-gray-500 hover:underline cursor-pointer"
+            >Accessibility |</span
+          >
+          <span class="text-xs text-gray-500 hover:underline cursor-pointer"
+            >Ads info |</span
+          >
+          <span class="text-xs text-gray-500 hover:underline cursor-pointer"
+            >More</span
+          >
+          <span class="text-xs text-gray-500">© 2025 X Corp.</span>
+        </footer>
+      </aside>
+    </div>
+    <script>
+      //  same code base for scroll behaivor but complex understand this
+      let isSyncingScroll = false;
+
+      function syncScroll(source, target) {
+        if (isSyncingScroll) return;
+
+        isSyncingScroll = true;
+
+        const ratio =
+          source.scrollTop / (source.scrollHeight - source.clientHeight);
+        target.scrollTop = ratio * (target.scrollHeight - target.clientHeight);
+
+        isSyncingScroll = false;
+      }
+
+      const main = document.getElementById("main");
+      const aside = document.getElementById("aside");
+
+      main.addEventListener("scroll", () => syncScroll(main, aside));
+      aside.addEventListener("scroll", () => syncScroll(aside, main));
+
+      // to navbar to appear
+      const toggleBtn = document.getElementById("toogleBtn");
+      const closeBtn = document.getElementById("closeBtn");
+      const navBar = document.getElementById("navBar");
+
+      toggleBtn.addEventListener("click", () => {
+        navBar.classList.toggle("max-max-500:opacity-100");
+        navBar.classList.toggle("max-max-500:translate-x-0");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        navBar.classList.add("max-max-500:opacity-0");
+        navBar.classList.add("max-max-500:-translate-x-full");
+        navBar.classList.remove("max-max-500:opacity-100");
+        navBar.classList.remove("max-max-500:translate-x-0");
+      });
+    </script>
+  </body>
+</html>
